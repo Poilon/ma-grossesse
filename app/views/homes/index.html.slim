@@ -1,6 +1,17 @@
-= 'Home'
+.content
 
-br
-= link_to 'Créer son compte', new_user_registration_path
-br
-= link_to 'Se connecter', new_user_session_path
+  h3= 'Bonjour à toutes !'
+  br
+  = 'Ce site vous permettras de suivre votre grossesse jour par jour, pour savoir où vous en êtes !'
+
+  br
+  br
+  = "Si c'est la première fois que vous venez, vous pouvez "
+  = link_to 'créer votre compte', new_user_registration_path
+  = ' en cliquant '
+  = link_to 'ici', new_user_registration_path
+  br
+  = 'Sinon, '
+  = link_to 'connectez-vous', new_user_session_path
+  = ' simplement en suivant ce '
+  = link_to 'lien', new_user_session_path
