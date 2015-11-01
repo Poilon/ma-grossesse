@@ -1,0 +1,13 @@
+.background-image
+.content
+  = "Bonjour #{current_user.first_name} #{current_user.last_name}"
+  br
+  = "Nous sommes le #{Date.today}, et vous êtes à #{@percentage.to_s}% de votre grossesse !"
+  br
+  br
+  .progress
+    .progress-bar role='progressbar' aria-valuenow="70" aria-valuemin='0' aria-valuemax='100' style="width:#{@percentage}%"
+      = @percentage.to_s + '%'
+  = "Date de début de grossesse : #{@start_date.to_date}"
+  br
+  = "Terme estimé : #{@end_date.to_date}"

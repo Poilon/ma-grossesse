@@ -1,0 +1,8 @@
+.footer
+  .footer-text
+    - if current_user
+      = link_to 'Se déconnecter', destroy_user_session_path, :method => :delete
+    - else
+      = link_to 'Se connecter', new_user_session_path
+      = ' | '
+      = link_to 'Créer son compte', new_user_registration_path

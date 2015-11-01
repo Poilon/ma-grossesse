@@ -1,0 +1,33 @@
+.content
+  h2
+    | Créez votre compte !
+  = form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
+    = devise_error_messages!
+    div
+      = f.label :email
+      br
+      = f.email_field :email, :autofocus => true
+    div
+      = f.label 'Mot de passe'
+      br
+      = f.password_field :password
+    div
+      = f.label 'Confirmation du mot de passe'
+      br
+      = f.password_field :password_confirmation
+    div
+      = f.label 'Prénom'
+      br
+      = f.text_field :first_name
+    div
+      = f.label 'Nom de famille'
+      br
+      = f.text_field :last_name
+    div
+      = f.label 'Date de début de grossesse'
+      br
+      = f.date_field :pregnancy_start_date
+    br
+    div
+      = f.submit 'Créer mon compte'
+    br
